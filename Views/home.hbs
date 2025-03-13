@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Periódica Dinámica</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="mb-5 h1"><h1>Tabla Periódica Dinámica</h1></div>
+
+    <div class="tabla-periodica">
+        {{#each elementos as |elemento|}}
+        <div class="elemento {{Grupo elemento.grupo}}" style="grid-column: {{elemento.columna}}; grid-row: {{elemento.fila}};">
+            <span>{{elemento.simbolo}}</span>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="mb-5 h1"><h3>Leyenda</h3></div>
+
+    <div>
+        <table class="leyenda">
+            <thead>
+                <tr>
+                    <th class="default" colspan="6">Metales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="A grupo">Alcalinos</td>
+                    <td class="AA grupo">AlcalinoTerreos</td>
+                    <td class="MT grupo">Metales de transición</td>
+                    <td class="LT grupo">Lantánidos</td>
+                    <td class="AT grupo">Actínidos</td>
+                    <td class="OM grupo">Otros metales</td>
+                </tr>
+                <tr>
+                    <th class="M metaloide" colspan="6">Metaloides</th>
+                </tr>
+                <tr>
+                    <th class="default" colspan="6">No metales</th>
+                </tr>
+                <tr>
+                    <td class="ONM grupo" colspan="2">Otros no metales</td>
+                    <td class="H grupo" colspan="2">Halógenos</td>
+                    <td class="GN grupo" colspan="2">Gases nobles</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
